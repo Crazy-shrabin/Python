@@ -1,0 +1,192 @@
+import spacy
+import nltk
+from nltk.tokenize import sent_tokenize
+import random
+import re
+import os
+import sys
+from nltk.stem import WordNetLemmatizer
+
+# --- 1. ROBUST SETUP AND INITIALIZATION ---
+
+# 1a. NLTK Path Fix: Use the single absolute path to your extracted data on the D: drive.
+# This line is the solution to the LookupError.
+nltk.data.path.append(r'D:\Ai project collage\nltk_data') 
+
+print("--- Initializing Libraries and Checking Data Paths ---")
+
+# 1b. Load NLTK resources and handle potential path errors gracefully
+try:
+    # Check if resources are available (it should succeed now that the path is set)
+    nltk.data.find('tokenizers/punkt')
+    nltk.data.find('corpora/wordnet')
+except LookupError:
+    # This error means the folders were not set up correctly inside D:\Ai project collage\nltk_data
+    print("FATAL ERROR: NLTK resources not found in the specified D: drive path.")
+    print("Please ensure 'punkt' is in the 'tokenizers' subfolder and 'wordnet' is in the 'corpora' subfolder.")
+    sys.exit()
+
+lemmatizer = WordNetLemmatizer()
+
+
+# 1c. Load the spaCy model
+try:
+    nlp = spacy.load("en_core_web_sm")
+    print("spaCy model loaded successfully.")
+except OSError:
+    print("FATAL ERROR: spaCy model 'en_core_web_sm' not found.")
+    print("Please run: python -m spacy download en_core_web_sm")
+    sys.exit()
+    
+print("--- Setup Complete. Starting Quiz Generation ---")
+
+
+# --- 2. TEXT EXTRACTION (SIMULATED FOR ALL FILE TYPES) ---
+
+def get_text_from_source(source_input):
+    """
+    Simulates reading from a file or takes raw text.
+    """
+    if isinstance(source_input, str):
+        if source_input.lower().endswith((".pdf", ".ppt", ".pptx")):
+            print(f"--- Simulating Text Extraction from: {os.path.basename(source_input)} ---")
+            return (
+                "The concept of Artificial Intelligence (AI) was formally proposed by John McCarthy in 1956 "
+                "at the Dartmouth Workshop. Machine Learning (ML) is a subset of AI that allows systems to learn "
+                "from data. A key component in many modern ML systems is the **Artificial Neural Network** (ANN), "
+                "which is inspired by the human brain. Python is the most utilized programming language in the AI field "
+                "due to its simplicity and extensive libraries. The Turing Test, introduced by Alan Turing in 1950, "
+                "remains a benchmark for evaluating a machine's ability to exhibit intelligent behavior."
+            )
+        else:
+            return source_input
+    
+    return "Error: Invalid source input."
+
+
+# --- 3. QUESTION AND ANSWER GENERATION CORE ---
+
+# Target entities suitable for good quiz questions (NER Labels)
+TARGET_ENTS = ["PERSON", "ORG", "DATE", "GPE", "PRODUCT", "EVENT"]
+
+def generate_quiz_pairs(text, num_options=4):
+    """
+    Processes text using spaCy NER to find key concepts and generates MCQs.
+    """
+    doc = nlp(text)
+    sentences = sent_tokenize(text) 
+    all_questions = []
+    
+    # Create a pool of all potential answers (entities) for distractors
+    all_entities = [
+        ent.text.strip() for ent in doc.ents 
+        if ent.label_ in TARGET_ENTS and len(ent.text.split()) > 1 
+        or ent.label_ in ["PERSON", "DATE"]
+    ]
+    
+    distractor_pool = sorted(list(set(all_entities)), key=len, reverse=True)
+    
+    for sent in sentences:
+        sent_doc = nlp(sent)
+        
+        key_entities = [ent for ent in sent_doc.ents if ent.label_ in TARGET_ENTS]
+        
+        if key_entities:
+            answer_ent = max(key_entities, key=lambda ent: len(ent.text))
+            answer_text = answer_ent.text.strip()
+            
+            # --- 1. Create the Question Stem (Fill-in-the-Blank) ---
+            
+            pattern = re.compile(r'\b' + re.escape(answer_text) + r'\b', re.IGNORECASE)
+            question_stem = pattern.sub("_________.", sent).strip()
+            
+            question_stem = re.sub(r'[\s\.]+$', '', question_stem).capitalize()
+            
+            # --- 2. Generate Distractors for MCQ ---
+            
+            incorrect_options = [
+                d for d in distractor_pool 
+                if d.lower() != answer_text.lower() and d.lower() not in question_stem.lower()
+            ]
+            
+            if len(incorrect_options) >= (num_options - 1):
+                distractors = random.sample(incorrect_options, num_options - 1)
+            else:
+                remaining_needed = num_options - 1 - len(incorrect_options)
+                
+                filler_candidates = [
+                    d for d in distractor_pool 
+                    if d.lower() not in [o.lower() for o in incorrect_options] and d.lower() != answer_text.lower()
+                ]
+                
+                if len(filler_candidates) >= remaining_needed:
+                    distractors = incorrect_options + random.sample(filler_candidates, remaining_needed)
+                else:
+                    distractors = incorrect_options + [f"Placeholder {i}" for i in range(remaining_needed)]
+            
+            options = distractors + [answer_text]
+            random.shuffle(options)
+            
+            all_questions.append({
+                "question": f"{question_stem}?",
+                "answer": answer_text,
+                "options": options
+            })
+            
+    return all_questions
+
+
+# --- 4. OUTPUT FORMATTING ---
+
+def format_quiz(quiz_data):
+    """Prints the generated quiz in a readable format."""
+    print("\n" + "="*60)
+    print("                 🧠 AI GENERATED QUIZ 🧠")
+    print("="*60)
+
+    for i, q in enumerate(quiz_data, 1):
+        print(f"\n--- Question {i} (Multiple Choice) ---")
+        print(f"Q: {q['question']}")
+        
+        option_letters = ['A', 'B', 'C', 'D', 'E']
+        for idx, option in enumerate(q['options']):
+            if idx < len(option_letters):
+                print(f"   {option_letters[idx]}. {option}")
+            else:
+                break
+        
+        try:
+            correct_letter = option_letters[q['options'].index(q['answer'])]
+        except ValueError:
+             correct_letter = "N/A (Answer mismatch)"
+             
+        print(f"\n   -> Correct Answer: {q['answer']} ({correct_letter})")
+        
+    print("\n" + "="*60)
+    print("Quiz Generation Complete.")
+    print("="*60)
+
+
+# --- 5. MAIN EXECUTION ---
+
+if __name__ == "__main__":
+    # Example input:
+    input_source = "college_project_chapter.pdf" 
+    
+    # 1. Get the source text
+    source_text = get_text_from_source(input_source)
+    
+    if source_text.startswith("Error"):
+        print(source_text)
+    else:
+        # 2. Generate the quiz pairs
+        generated_quiz = generate_quiz_pairs(source_text)
+        
+        # 3. Output the quiz
+        if generated_quiz:
+            format_quiz(generated_quiz)
+        else:
+            print("Could not generate any unique questions from the provided text. Try a longer or more detailed input.")
+            
+    # Keep the window open if running by double-click
+    input("\nPress Enter to close the window...")
