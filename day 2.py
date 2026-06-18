@@ -106,4 +106,38 @@ d = 40
 # b = int(input("Enter the 2nd value:"))
 # print(a>=b)
 
-hello
+# str1 = "K cha muji. k cha tero haal khabaar.\nMa sanchai chau. ta mero khyal na gar\t\t\t"
+# print(str1)
+ 
+# str2 = "abcdefghijkl\tmnopqrstuvwxyz"
+# print(str2)
+
+# print(str1 + str2)
+
+# len1 = len(str1)
+# print(len1)
+
+# str1 = "Bibek"
+# str2 = "Parajuli"
+
+# fullstr = str1 + " " +str2
+# print(fullstr)
+# print(len(fullstr))
+
+# str = "Bibek Parajuli"
+# print(str[4])
+
+# print(str [0:len(str)])
+
+
+
+
+# str = "kathmandu_lalitput"
+# print(str[:6])
+
+str1 = "Apple"
+print(str1[-5:-1])
+
+
+
+
