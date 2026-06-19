@@ -135,9 +135,8 @@ d = 40
 # str = "kathmandu_lalitput"
 # print(str[:6])
 
-str1 = "Apple"
-print(str1[-5:-1])
+# str1 = "Apple"
+# print(str1[-5:-1])
 
-
-
-
+# str = "Typewriter"
+# print(str.endswith("ter"))
