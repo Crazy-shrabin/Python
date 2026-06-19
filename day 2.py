@@ -138,5 +138,33 @@ d = 40
 # str1 = "Apple"
 # print(str1[-5:-1])
 
-# str = "Typewriter"
-# print(str.endswith("ter"))
+# str = "typewriter"
+# # print(str.endswith("app"))
+
+# print(str.capitalize())
+# print(str.replace("typewriter", "umji"))
+# print(str.find("u"))
+# print(str.count("muji"))
+
+# str = "keyboard is the typing machine."
+# print(str.endswith("ne."))
+# print(str.capitalize())
+# print(str.replace("machine", "mechanism"))
+# print(str.find('a'))
+# print(str.count('the'))
+
+# print(str.count("the"))
+
+
+# first_name = str(input("Enter your first name:"))
+# name_length = len(first_name)
+# print("Your first name is:",first_name," and the length of the first name is:",name_length)
+
+
+# name = input("Enter your name:")
+# print("The len of your name is:", len(name))
+
+
+abu = input("Enter the dollar sign:")
+print("The total number of value is:", str.count(abu))
+
