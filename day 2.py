@@ -165,6 +165,47 @@ d = 40
 # print("The len of your name is:", len(name))
 
 
-abu = input("Enter the dollar sign:")
-print("The total number of value is:", str.count(abu))
+# abu = char(input("Enter the dollar sign:"))
+# print("The total number of value is:", str.count(abu))
+
+
+# str = input("Enter the dollar signs:")
+# print(str.count("$"))
+
+
+
+# light = str(input("Enter the signal:"))
+
+# if(light == "red"):
+#     print("Stop")
+# elif(light == "yellow"):
+#     print("Slow down.")
+# elif(light == "green"):
+#     print("Go")
+# else:
+#     print("What the fuck!!!")
+    
+
+# rate = int(input("Enter the value of a girl in out of 10 scale."))
+# if rate == 1 or rate == 2:
+#     print("Dogshit")
+# elif rate == 3 or rate == 4:
+#     print("Need to replace")
+# elif rate == 5 or rate == 6:
+#     print("ok-ok")
+# elif rate == 7 or rate == 8:
+#     print("Hmmm..., You got the good one.")
+# elif rate == 9 or rate == 10:
+#     print("She aint special bruh...")
+# else:
+#     print("Bruh you haven't dated enough.")
+
+
+age = int(input("Enter the age:"))
+
+if(age >= 18):
+    print("Can drive")             #indentation
+
+else:
+    print("Can not drive")
 
