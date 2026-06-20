@@ -201,11 +201,19 @@ d = 40
 #     print("Bruh you haven't dated enough.")
 
 
-age = int(input("Enter the age:"))
+# age = int(input("Enter the age:"))
+
+# if(age >= 18):
+#     print("Can drive")             #indentation
+
+# else:
+#     print("Can not drive")
+
+age = int(input("Enter your age:"))
 
 if(age >= 18):
-    print("Can drive")             #indentation
-
+    print("Can drive")
+elif(age < 17 ):
+    print("cannot drive")
 else:
-    print("Can not drive")
-
+    print("Error")
