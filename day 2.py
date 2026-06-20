@@ -274,3 +274,22 @@ d = 40
 #     print("It is NOT devisible by 7, your num is: ", a)
 
 
+# marks = [1,2,3,4,5,6,7,7,8,9,9]
+# print(marks)
+# print(len(marks))
+# print(marks[0])
+# print(marks[1])
+
+
+
+# str = "hello"
+# print(str[0])
+# str[0] = "y"
+
+
+
+
+
+student = ["karan", 85, "Delhi"]
+student[1] = "99"
+print(student) 
