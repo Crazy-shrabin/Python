@@ -270,6 +270,7 @@ print(num)
 
 
 
+
 # 2.	List of Strings:
 # Create a list of your five favorite fruits. Print the list.
 fruits = ["apple", "banana", "cherry", "grapes", "gauva"]
@@ -281,16 +282,31 @@ print(fruits)
 
 
 
+# 3.	Accessing Elements:
+# Given the list [10, 20, 30, 40, 50], print the first and last element using positive and negative indexing.
+list = [10, 20, 30, 40, 50]
+print(list[0])
+print(list[4])
+print(list[-1])
+print(list[-5])
 
 
 
 
 
 
+# 4.    List Length:
+# Create a list of any 5 items and print its length using the len() function.
+list1 = ["apple", "chair", "table", "monitor", "mouse"]
+print(len(list1))
 
 
 
 
+
+
+5.	Appending Elements:
+Start with an empty list and append the numbers 1, 2, and 3. Print the list.
 
 
 
