@@ -492,3 +492,60 @@ print(tuple10)
 tuple11 = (10, 20, 30, 40)
 tuple12 = tuple11.index(30)
 print(tuple12)
+
+
+
+
+
+#-----------------------------Assignment 3 --------------------------------------------------------------
+
+# Integer & Float Mix
+# •	Create an integer a and a float b.
+# •	Perform addition, subtraction, multiplication, and division on them.
+# •	Print the results and observe the type of each result with type().
+aaa = int(20)
+bbb = float(20)
+print("addition:",aaa+bbb, "Subtraction:",aaa-bbb,"Multiplication:",aaa*bbb,"division:",aaa/bbb)
+
+
+
+
+
+
+
+# Large Integers & Type
+# •	Assign a very large integer to a variable (e.g., in the billions).
+# •	Print it and confirm its type is still int in Python or not.
+billion = 9999999999999999999999999999999999999999999
+print(type(billion))
+
+
+
+
+
+
+
+# Complex Number Basics
+# •	Create a complex number z = 3 + 4j.
+# •	Print its real part, imaginary part, and confirm its type is complex.
+# •	Perform a basic arithmetic operation with another complex number (e.g., (3 + 4j) + (1 + 2j)).
+z = 3+4j
+print((4+4j)+(1+2j))
+
+
+
+
+
+
+# Boolean from Comparisons
+# •	Create two variables, m = 10 and n = 15.
+# •	Define status = (m > n) and print status.
+# •	Confirm type(status) is bool.
+# •	Assign status = (m != n) and print again.
+m = 10
+n = 15
+status = (m>n)
+print(status)
+print(type(status))
+status = ( m != n)
+print(status)
