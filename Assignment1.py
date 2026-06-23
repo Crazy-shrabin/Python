@@ -549,3 +549,210 @@ print(status)
 print(type(status))
 status = ( m != n)
 print(status)
+
+
+
+
+#String Creation & Indexing
+# •	Create a string text = "HelloWorld".
+# •	Print the first and last characters using positive and negative indexing.
+# •	Comment on the total length of the string.
+text1 = "helloworld"
+firstp = text1[0]      
+firstn = text1[-10]    
+
+lastp = text1[9]      
+lastn = text1[-1]     
+print(f"First character (positive): {firstp}")
+print(f"First character (negative): {firstn}")
+print(f"Last character (positive): {lastp}")
+print(f"Last character (negative): {lastn}")
+
+
+
+# String Slicing
+# •	With lang = "PythonProgramming", print the substring from index 2 to 8.
+# •	Print the substring from the start up to index 5.
+# •	Print the entire string in reverse using slicing.
+lang2 = "PythonProgramming"
+sub = lang2[2:8]
+subb = lang[:5]
+rever = lang[::-1]
+
+print(f"Substring (2 to 8): {sub}")
+print(f"Substring (start to 5): {subb}")
+print(f"Reversed string: {rever}")
+
+
+
+
+
+
+
+
+# String Methods
+# •	Let phrase = " Hello, Python World! ".
+# •	Demonstrate strip(), upper(), and replace() on this string.
+# •	Print the results and comment on immutability of strings in Python.
+phrase = "  Hello, Python World!  "
+str77 = phrase.strip()
+uppe = str77.upper()
+replaced = uppe.replace("PYTHON", "CODING")
+
+print(f"Original: '{phrase}'")
+print(f"Stripped: '{str77}'")
+print(f"Uppercase: '{uppe}'")
+print(f"Replaced: '{replaced}'")
+
+
+
+
+
+
+
+
+
+
+# String Formatting
+# •	Create two variables: name = "Rajesh" and score = 95.
+# •	Print: "Alice scored 95 points." using two methods (concatenation and an f-string or str.format()).
+raje = "Rajesh"
+score = 95
+print(raje + " scored " + str(score) + " points.")
+print(f"{raje} scored {score} points.")
+
+
+
+
+
+
+# Boolean Operations in Expressions
+# •	Write a small expression using and, or, and not with boolean values.
+# •	Example: result = not(True and False) or (5 > 3).
+# •	Print result and explain how Python evaluated the expression.
+# Boolean expression
+# Evaluates: not(True and False) or (5 > 3)
+resultt = not(True and False) or (5 > 3)
+print(f"The result of the expression is: {resultt}")
+
+
+
+
+
+
+
+# List Creation & Access
+# •	Create a list of 5 different integers.
+# •	Print the first item, middle item, and last item using indexing.
+ # Create a list of 5 integers
+number7 = [10, 25, 40, 55, 70]
+first_item = number7[0] 
+middle_item = number7[2] 
+last_item = number7[4]  
+
+print(f"First item: {first_item}")
+print(f"Middle item: {middle_item}")
+print(f"Last item: {last_item}")
+
+
+
+
+
+
+
+# List Slicing
+# •	Given letters = ["a", "b", "c", "d", "e"], print the slice that contains only ["b", "c", "d"].
+# •	Print the slice that omits the first and the last element.
+letters = ["a", "b", "c", "d", "e"]
+slice_bcd = letters[1:4]
+slice_omitted = letters[1:-1]
+print(f"Slice ['b', 'c', 'd']: {slice_bcd}")
+print(f"Slice omitting first and last: {slice_omitted}")
+
+
+
+
+
+
+# Sorting & Reversing
+# •	Create a list of random integers.
+# •	Sort the list in ascending order and print it.
+# •	Reverse the sorted list and print again.
+# Create a list of integers manually
+numbers3 = [42, 7, 89, 15, 33]
+print(f"Original list: {numbers3}")
+
+numbers3.sort()
+print(f"Sorted list: {numbers3}")
+
+numbers3.reverse()
+print(f"Reversed list: {numbers3}")
+
+
+
+
+
+
+
+# Combining Lists
+# •	Let list1 = [1, 2, 3] and list2 = [4, 5, 6].
+# •	Combine them into a single list and print.
+# •	Demonstrate two ways: using + and using .extend().
+list5 = [1, 2, 3]
+list6 = [4, 5, 6]
+
+# Method 1: Using the '+' operator
+# This creates a brand new list and leaves the originals unchanged
+combined_plus = list5 + list6
+
+# Method 2: Using the .extend() method
+# This modifies 'list1' directly (in-place)
+list5.extend(list6)
+
+print(f"Result using +: {combined_plus}")
+print(f"Result using .extend(): {list5}")
+
+
+
+
+
+
+# # Aggregating List Values
+# # •	Create a list of floats, e.g., [2.5, 3.6, 1.2, 5.0].
+# # •	Print the sum, minimum, and maximum of that list using built-in functions.
+# values8 = [2.5, 3.6, 1.2, 5.0]
+
+# total_sum = sum(values8)
+# min_val = min(values8)
+# max_val = max(values8)
+
+# print(f"List: {values8}")
+# print(f"Sum: {total_sum}")
+# print(f"Minimum: {min_val}")
+# print(f"Maximum: {max_val}")
+
+
+
+
+
+
+
+# Tuple Creation
+# •	Create a tuple t = (10, 20, "Hello", True).
+# •	Print the tuple and confirm its type with type(t).
+# Create a tuple containing mixed data types
+t = (10, 20, "Hello", True)
+print(f"Tuple: {t}")
+print(f"Type: {type(t)}")
+
+
+
+
+
+
+# Tuple Indexing & Slicing
+# •	Print the first two elements of t using slicing.
+# •	Print the last element of t using negative indexing.
+t1 = (10, 20, "Hello", True)
+print(f"First two elements: {t1[:2]}")
+print(f"Last element: {t1[-1]}")
