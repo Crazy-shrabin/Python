@@ -756,3 +756,159 @@ print(f"Type: {type(t)}")
 t1 = (10, 20, "Hello", True)
 print(f"First two elements: {t1[:2]}")
 print(f"Last element: {t1[-1]}")
+
+
+
+
+
+
+# Tuple Unpacking
+# •	Suppose t2 = ("Tom", 25, "Engineer").
+# •	Unpack it into three separate variables: name, age, profession.
+# •	Print these variables individually.
+# Create the tuple
+t2 = ("Tom", 25, "Engineer")
+name, age, profession = t2
+print(f"Name: {name}")
+print(f"Age: {age}")
+print(f"Profession: {profession}")
+
+
+
+
+
+# Attempt Tuple Mutation
+# •	Try to change an element of t (t[0] = 999) and observe the error.
+# •	In comments, explain why the error occurs.
+tt = (10, 20, "Hello", True)
+try:
+    tt[0] = 999
+except TypeError as ee:
+    print(f"Error caught: {ee}")  #Error caught: 'tuple' object does not support item assignment
+
+
+
+
+
+
+# Set Creation & Membership
+# •	Create a set my_set = {1, 3, 5, 7}.
+# •	Check if 5 is in my_set.
+# •	Check if 2 is not in my_set.
+# Create a set
+my_set = {1, 3, 5, 7}
+is_five_present = 5 in my_set
+is_two_absent = 2 not in my_set
+print(f"Set: {my_set}")
+print(f"Is 5 in my_set? {is_five_present}")
+print(f"Is 2 not in my_set? {is_two_absent}")
+
+
+
+
+
+
+# Add & Remove Elements
+# •	Add 9 to my_set.
+# •	Remove 3 from my_set.
+# •	Print the updated set.
+# Create the set
+my_set = {1, 3, 5, 7}
+my_set.add(9)
+my_set.remove(3)
+print(f"Updated set: {my_set}")
+
+
+
+
+
+
+# Set Operations
+# •	Create two sets: setA = {1, 2, 3} and setB = {3, 4, 5}.
+# •	Print the union, intersection, and difference (setA - setB).
+setA = {1, 2, 3}
+setB = {3, 4, 5}
+
+union_set = setA | setB 
+intersection_set = setA & setB  
+difference_set = setA - setB  
+
+print(f"Union: {union_set}")
+print(f"Intersection: {intersection_set}")
+print(f"Difference (setA - setB): {difference_set}")
+
+
+
+
+
+
+
+# Check Unique Values
+# •	Define a list vals = [1, 2, 2, 3, 3, 3, 4].
+# •	Convert it to a set.
+# •	Print both the list and the set to show how duplicates are removed.
+# Define a list with duplicate values
+vals = [1, 2, 2, 3, 3, 3, 4]
+unique_vals = set(vals)
+print(f"Original list: {vals}")
+print(f"Converted set: {unique_vals}")
+
+
+
+
+
+
+
+# Frozenset Creation
+# •	Create a frozenset from a list [2, 4, 4, 6].
+# •	Print it and observe whether duplicates are preserved.
+# Create a list with duplicates
+my_list = [2, 4, 4, 6]
+frozen = frozenset(my_list)
+
+print(f"Original list: {my_list}")
+print(f"Frozenset: {frozen}")
+
+
+
+
+
+
+# Operator Precedence
+# •	Define a = 4, b = 2, c = 5.
+# •	Print the result of a + b * c vs. (a + b) * c.
+# •	Explain in comments how the result differs.
+aaaa = 4
+bbbb = 2
+cccc = 5
+
+# Expression 1: Standard precedence
+# Multiplication (*) is performed before addition (+)
+result1 = aaaa + bbbb * cccc
+
+# Expression 2: Forced precedence
+# Parentheses () are evaluated first, overriding standard rules
+result2 = (aaaa + bbbb) * cccc
+
+print(f"Result of a + b * c: {result1}")
+print(f"Result of (a + b) * c: {result2}")
+
+
+
+
+
+
+
+# Modulo & Floor Division
+# •	Let x = 17 and y = 4.
+# •	Print x % y and x // y.
+# •	Explain the difference between these two operators in comments.
+xx = 17
+yy = 4
+
+remainder = xx % yy
+
+quotient = xx // yy
+
+print(f"17 % 4 = {remainder}")
+print(f"17 // 4 = {quotient}")
