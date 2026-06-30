@@ -150,10 +150,10 @@ connection = () #it creates the empty set.
 # }
 # print(dict)
 
-classes = {"python", "java", "C++", "python", "js", "java", "python", "java", "C++", "c"}
-classes.union
-print(len(classes))
-print(f"required classes are {len(classes)}.")
+# classes = {"python", "java", "C++", "python", "js", "java", "python", "java", "C++", "c"}
+# classes.union
+# print(len(classes))
+# print(f"required classes are {len(classes)}.")
 
 
 
