@@ -53,3 +53,20 @@
 
 
 
+
+
+
+
+
+
+# ervision_----------------------
+info = {
+    "name" : "Bibek_Parauli",
+    "subjects" : ["Python", "c", "java"],
+    "yopics" : ("dict", "set"),
+    "is_adult" : True,
+    12.99 : 832.128
+}
+
+info.update({"age":"21"})
+print(info['age'])
