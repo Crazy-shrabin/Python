@@ -36,3 +36,18 @@
 
 
 
+
+
+#print the element if the following list using a loop:  [1,4,9,16,25,36,49,64,81,100]
+# num = [1,4,9,16,25,36,49,64,81,100]
+# idx = 0
+# while idx < len(num):
+#     print(num[idx])
+#     idx += 1
+# print("Loop Ended!")
+
+
+
+
+# Search for a number X in this tuple using loop:  (1,4,9,16,25,36,49,64,81,100)
+tup = (1,4,9,16,25,36,49,64,81,100)
