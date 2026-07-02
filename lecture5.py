@@ -139,11 +139,71 @@
 
 
 
-nums = (1,4,9,16,25,36,49,64,81,100)
+# nums = (1,4,9,16,25,36,49,64,81,100)
 
-x = 36
-i = 0
-while i < len(nums):
-    if(nums[i] == x):
-        print("found")
-    i += 1
+# x = 36
+# i = 0
+# while i < len(nums):
+#     if(nums[i] == x):
+#         print("found")
+#     i += 1
+
+
+
+
+# i = 1
+# while i <= 10:
+#     print(i)
+#     if (i == 3):
+#         break
+#     i += 1
+# print("end of loop!")
+
+
+
+# num = (1,2,3,4,5,6,7,8,9,10)
+# x = 6
+# i = 0
+
+# while i <= len(num):
+#     if(num[i] == x):
+#         print("Found at idx",i)
+#         break
+#     else:
+#         print("finding...")
+#     i += 1
+
+# print("End of loop!")
+
+
+# i = 0
+# while i <= 10:
+#     if(i == 5):
+#         i += 1
+#         continue
+#     print(i)
+#     i += 1
+
+
+# i = int(input("enter the number: "))
+
+# while i <= 10:
+#     if(i%2 != 0):
+#         i += 1
+#         continue
+#     print(i)
+#     i += 1
+
+
+
+nums = (1,4,9,16,25,36,49,64,81,100,49)
+x = 49
+
+idx = 0
+
+for el in nums:
+    if (el == x):
+        print("Found", idx) 
+        break
+    idx += 1
+  
