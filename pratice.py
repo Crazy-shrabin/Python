@@ -123,3 +123,21 @@
  
 
 
+#WAF to print length of a list. (list is the parameter)
+cities = ["ktm", "ltr", "pkr", "bir"]
+def print_len(lists):
+    print(len(lists))
+
+print_len(cities)
+
+
+
+#WAF to print the elements if a list in a single line. (list is the parameter)
+def print_elem():
+    i = 0
+    print(print_elem[i])
+    i+=1
+    print(print_elem)
+    return()
+
+print_elem(cities)
