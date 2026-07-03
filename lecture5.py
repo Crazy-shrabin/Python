@@ -196,13 +196,49 @@
 
 
 
-nums = (1,4,9,16,25,36,49,64,81,100,49)
-x = 49
+# nums = (1,4,9,16,25,36,49,64,81,100,49)
+# x = 49
 
-idx = 0
+# idx = 0
 
-for el in nums:
-    if (el == x):
-        print("Found", idx) 
-    idx += 1
+# for el in nums:
+#     if (el == x):
+#         print("Found", idx) 
+#     idx += 1
   
+
+
+
+# nums = (1,2,3,4,5,6,7,8,9,10)
+# x = 49
+
+# idx = 0
+# for el in nums:
+#     if (el == x):
+#         print("number found at idx", idx)
+#         break
+#     idx += 1
+
+
+
+
+# for i in range(10):
+#     print(i)
+
+
+# for a in range(1,100):
+#     print(a)
+
+# n = int(input("Enter the number: "))
+
+# for i in range(1,1000):
+    
+#     print(n*i)
+
+
+n = 5
+sum = 0
+for el in range(n+1):
+
+    sum += el
+print(sum)
