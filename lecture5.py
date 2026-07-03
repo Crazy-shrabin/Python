@@ -236,9 +236,14 @@
 #     print(n*i)
 
 
-n = 5
-sum = 0
-for el in range(n+1):
+# n = 5
+# sum = 0
+# for el in range(n+1):
+#     sum += el
+# print(sum)
 
-    sum += el
-print(sum)
+
+x = 0
+for i in range(5):
+    x+=i
+print(x)
