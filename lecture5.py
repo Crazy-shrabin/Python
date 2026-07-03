@@ -204,6 +204,5 @@ idx = 0
 for el in nums:
     if (el == x):
         print("Found", idx) 
-        break
     idx += 1
   
