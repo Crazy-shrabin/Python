@@ -21,9 +21,14 @@ def calc_mul(a, b):
 calc_mul(23, 12)
 
 
+
+
+print("bibek Parajuli")
 print("bibek Parajuli")
 
 
 
 
+print("bibek Parajuli")
+print("bibek Parajuli")
 
