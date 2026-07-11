@@ -48,10 +48,40 @@
 #     print(data)
    
 
-with open("demo.txt", "w") as writinggg:
-    writinggg.write("hello shaktiman")
-    print(writinggg)
- 
+# with open("demo.txt", "w") as writinggg:
+#     writinggg.write("hello shaktiman")
+#     print(writinggg)
 
 
+
+
+
+
+
+# ------------------------------------------------------------
+# Deleting the file
+# using the os module
+# Module(like a code library) is a file written by another programmer that generally has a function that we can use.UserWarning
+
+# import os
+# os.remove( filename )
+
+
+
+
+# with open("removing.txt", "w") as removing:
+#     removing.write("hello world!")
+
+# import os
+# os.remove("removing.txt")
+
+
+
+with open("pratice.txt", "r") as p:
+    data = p.read()
+
+new_data = data.replace("Java", "Python")
+print(new_data)
+
+    
 
