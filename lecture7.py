@@ -58,6 +58,8 @@
 
 
 
+
+
 # ------------------------------------------------------------
 # Deleting the file
 # using the os module
@@ -77,11 +79,13 @@
 
 
 
-with open("pratice.txt", "r") as p:
-    data = p.read()
+# with open("pratice.txt", "r") as p:
+#     data = p.read()
 
-new_data = data.replace("Java", "Python")
-print(new_data)
+# new_data = data.replace("Java", "Python")
+# print(new_data)
 
     
 
+with open("Tryingmore.py", "w") as a:
+    a.write("hello nepal")
