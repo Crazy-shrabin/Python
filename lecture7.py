@@ -87,5 +87,7 @@
 
     
 
-with open("Tryingmore.py", "w") as a:
-    a.write("hello nepal")
+
+with open("Oops_lecture_7.py", "w") as Oops:
+    Oops.write("Oops")
+    print(Oops)
