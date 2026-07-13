@@ -43,6 +43,15 @@
 # for el in range(1, 101, 1):
 #     print(el)
    
-n = int(input("Enter the number: "))
-for e in range(1, 11):
-    print(n * e)
+# n = int(input("Enter the number: "))
+# for e in range(1, 11):
+#     print(n * e)
+
+n = 7
+sum = 0
+i = 1
+while i <= n:
+    sum += i
+    i += 1
+
+print("total sum= ", sum) 
