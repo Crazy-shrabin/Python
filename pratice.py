@@ -124,20 +124,136 @@
 
 
 #WAF to print length of a list. (list is the parameter)
-cities = ["ktm", "ltr", "pkr", "bir"]
-def print_len(lists):
-    print(len(lists))
+# cities = ["ktm", "ltr", "pkr", "bir"]
+# def print_len(lists):
+#     print(len(lists))
 
-print_len(cities)
+# print_len(cities)
 
 
 
 #WAF to print the elements if a list in a single line. (list is the parameter)
-def print_elem():
-    i = 0
-    print(print_elem[i])
-    i+=1
-    print(print_elem)
-    return()
+# cities = ["ktm", "ltr", "pkr", "bir"]
+# def print_elem():
+#     i = 0
+#     print(print_elem[i])
+#     i+=1
+#     print(print_elem)
+#     return()
 
-print_elem(cities)
+# print_elem(cities)
+
+
+
+
+
+
+
+
+
+
+# 1. Variables & Data TypesQuestion: Create a variable for a store item's name (string),
+# its price (float), and the quantity in stock (integer). Calculate the total value of
+# the stock and print it.Hint: Total value = price $\times$ quantity.
+
+# items_name = input("Enter the name of product: ")
+# items_price = 20
+# items_quantity = int(input("Enter the quantity of the product: "))
+
+# total_value = items_price*items_quantity
+# print("The total amount of", items_name,"is",total_value,"nrs")
+
+
+
+
+
+
+
+
+# 2. Strings & Conditional Statements
+# Question: Write a program that takes a user's input string. If the length of the string
+# is greater than 5 characters, print "Long word!". Otherwise, print "Short word!".
+
+# Hint: Use the len() function and an if-else block.
+# user_input = input("Enter the words: ")
+# word_len = len(user_input)
+# if word_len <= 5:
+#     print("Short Word")
+# else:
+#     print("Long word!")
+
+
+
+
+
+
+
+# 3. Lists & Tuples
+# Question: Create a list of three of your favorite fruits. Add a fourth fruit to the
+# end of the list, and then print the second fruit in the list.
+
+# Hint: Remember that Python lists use zero-based indexing ([0] is the first item).
+
+# fruits = ["Strawberry", "Litchi", "Mango"]
+# fruits.append("Grapes")
+
+# print(fruits[-3])
+
+
+
+
+
+
+# 4. Dictionaries & Sets
+# Question: Create a dictionary representing a person with the keys "name" and "age".
+# Print just the person's age. Then, create a set of numbers {1, 2, 3} and try adding
+# the number 2 to it to see what happens.
+
+# Hint: Sets do not allow duplicate values!
+# person1 = { 
+#     "name" : "Sajana Poudel",
+#     "age" : '20'
+# }
+# print(person1["age"])
+
+# s = set([1,2,3])
+# s.add(2)
+# print(s)
+
+
+# 5. Loops (For & While)
+# Question: * Part A: Use a for loop to print the numbers from 1 to 5.
+
+# Part B: Use a while loop to print the numbers from 5 down to 1
+
+# i = 1
+# while i <= 5:
+#     print(i)
+#     i += 1
+
+
+
+# j = 1
+# while j <= 5:
+#     print(j)
+#     j += 1
+
+
+
+
+# for j in range(1,6,1):
+#     print(j)
+
+
+
+
+
+
+# 6. Functions
+# Question: Write a function called greet_user(name) that takes a name
+# as an argument and prints "Hello, [name]!". Call the function with your own name.
+
+# def greet_user(a):
+#         print(f"Hello,{a}!")
+
+# greet_user("bibek")
