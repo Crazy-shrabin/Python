@@ -1,5 +1,5 @@
-cities = ["ktm", "pkr", "ctwn", "brtn", "illam"]
-famous = ["temple","nature", "market", "deal", "teas"]
+# cities = ["ktm", "pkr", "ctwn", "brtn", "illam"]
+# famous = ["temple","nature", "market", "deal", "teas"]
 
 
 # def print_len(list):
@@ -34,7 +34,7 @@ famous = ["temple","nature", "market", "deal", "teas"]
 
 # converter(15)
 
-# recusive function
+
 # def show (n):
 #     if (n == 0):
 #         return
@@ -43,36 +43,55 @@ famous = ["temple","nature", "market", "deal", "teas"]
 
 # show(55)
 
-def calc_sum(a, b):
-    return a + b
-def print_hello ():
-    print("hello")
-def calc_avg(a, b, c):
-    sum = a + b + c
-    div = sum/3
-    print(div)
-    return div
-def len_cities(list):
-    print(len(list))
-def single_line(list):
-    print(list)
-    return list
-def print_list(list):
-    for item in list:
-        print(item, end = " ")
-def cal_fact(n):
-    fact = 1
-    for i in range(1, n+1):
-        fact *= i
-    print(fact)        
+# def countdown(n):
+#     if n == 0:
+#         print("bomb-blast!!!")
+#     else:
+#         print(n)
+#         countdown(n-1)
 
 
+# countdown(10)
 
 
+# def even_or_odd(n):
+#     if n%2:
+#         print("Odd")
+#     else:
+#         print("Even")
+
+# even_or_odd(8)
+
+# def show(n):
+#     if (n == 0):
+#         return
+#     print(n)
+#     show(n-1)
+
+# show(5)
+
+# def fact(n):
+#     if n == 0 or n==1:
+#         return 1
+#     else:
+#         return n * fact(n-1)
+        
 
 
-def usd_to_npr(n):
-    a = 153.82 * n
-    print("The total money conversion amount is: ", a) 
+# def fact(n):
+#     if n == 1 or n == 0:
+#         return 1
+#     else:
+#         return n * fact(n-1)
 
-usd_to_npr(20)
+# print(fact(5))
+
+
+def add_natural_num(n):
+    if n == 1:
+        return 1
+    
+    return add_natural_num(n-1) + n
+
+
+print(add_natural_num(5))
