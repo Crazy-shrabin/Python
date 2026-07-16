@@ -257,3 +257,26 @@
 #         print(f"Hello,{a}!")
 
 # greet_user("bibek")
+
+
+
+# with open("pratice.txt", "r") as a:
+#     data = a.read()
+
+# new_data = data.replace("java","python")
+# print(new_data)
+
+# with open("pratice.txt", "w") as a:
+#     a.write(new_data)
+
+
+def check_for_word(word):
+    word = input("Enter the word:")
+    with open("pratice.txt", "r") as f:
+        data = f.read()
+        if(data.find(word) != -1):
+          print("found")
+        else:
+            print("not found")
+
+check_for_word("everyone")
