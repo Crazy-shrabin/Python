@@ -270,13 +270,18 @@
 #     a.write(new_data)
 
 
-def check_for_word(word):
-    word = input("Enter the word:")
-    with open("pratice.txt", "r") as f:
-        data = f.read()
-        if(data.find(word) != -1):
-          print("found")
-        else:
-            print("not found")
+# def check_for_word(word):
+#     word = input("Enter the word:")
+#     with open("pratice.txt", "r") as f:
+#         data = f.read()
+#         if(data.find(word) != -1):
+#           print("found")
+#         else:
+#             print("not found")
 
-check_for_word("everyone")
+# check_for_word("everyone")
+
+
+f = open("Oops_lecture_8_.py", "w")
+f.write("#lecture_8")
+f.close()
