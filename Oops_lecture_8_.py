@@ -45,23 +45,47 @@
 # print(s2.name, s2.address, s2.mark)
 
 
-class Car:
-    def __init__(self, car_brand, car_price):
-        self.brand = car_brand
-        self.price = car_price
+# class Car:
+#     def __init__(self, car_brand, car_price):
+#         self.brand = car_brand
+#         self.price = car_price
 
-car1 = Car("Farari", "$250,000")
-car2 = Car("Lamborgeni", "$350,000")
+# car1 = Car( "Farari", "$250,000")
+# car2 = Car( "Lamborgeni", "$350,000")
 
-print(car1.car_brand, car1.car_price)
-print(car2.car_brand, car2.car_price)
-
-
+# print( car1.brand, car1.price)
+# print( car2.brand, car2.price )
 
 
 
 
+#------------------Class and instance attributes-----------------
+#class.attr
+#obj.attr
+
+ 
 
 
+
+
+class Student:
+    collage_name = "NCMT"
+    
+    def __init__(self, name, roll_no, address):
+        self.name = name
+        self.roll_no = roll_no
+        self.address = address
+
+    def welcome(self):
+        print("Welcome Student.", self.name)
+
+    def get_address(self):
+        return self.address
+    
+S1 = Student("Bibek Parajuli", "03", "kathmandu")
+
+S1.welcome()
+
+print(S1.get_address())
 
 
