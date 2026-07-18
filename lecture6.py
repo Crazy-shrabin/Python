@@ -87,11 +87,13 @@
 # print(fact(5))
 
 
-def add_natural_num(n):
-    if n == 1:
-        return 1
+# def add_natural_num(n):
+#     if n == 1:
+#         return 1
     
-    return add_natural_num(n-1) + n
+#     return add_natural_num(n-1) + n
 
 
-print(add_natural_num(5))
+# print(add_natural_num(5))
+
+open("try.py", "w")
