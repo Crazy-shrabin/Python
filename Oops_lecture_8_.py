@@ -68,25 +68,25 @@
 
 
 
-class Student:
-    collage_name = "NCMT"
+# class Student:
+#     collage_name = "NCMT"
     
-    def __init__(self, name, roll_no, address):
-        self.name = name
-        self.roll_no = roll_no
-        self.address = address
+#     def __init__(self, name, roll_no, address):
+#         self.name = name
+#         self.roll_no = roll_no
+#         self.address = address
 
-    def welcome(self):
-        print("Welcome Student.", self.name)
+#     def welcome(self):
+#         print("Welcome Student.", self.name)
 
-    def get_address(self):
-        return self.address
+#     def get_address(self):
+#         return self.address
     
-S1 = Student("Bibek Parajuli", "03", "kathmandu")
+# S1 = Student("Bibek Parajuli", "03", "kathmandu")
 
-S1.welcome()
+# S1.welcome()
 
-print(S1.get_address())
+# print(S1.get_address())
 
 
 #--------------------------Satic Method----------------------
@@ -121,25 +121,68 @@ print(S1.get_address())
 
 #Encaptulation --- Wrapping data and function into a single unit (object).
 
-class bankacc1:
-    def __init__(self, balance, acc_no):
-        self.balance = balance
-        self.acc_no = acc_no
+# class bankacc1:
+#     def __init__(self, balance, acc_no):
+#         self.balance = balance
+#         self.acc_no = acc_no
 
-    def debit(self, amount):
-        self.balance -= amount
-        print("rs", amount , "was debited")
-        print("total balance =", self.get_balance())
+#     def debit(self, amount):
+#         self.balance -= amount
+#         print("rs", amount , "was debited")
+#         print("total balance =", self.get_balance())
 
-    def credit(self, amount):
-        self.balance += amount
-        print("rs", amount , "has been credited")
-        print("total balance =", self.get_balance())
+#     def credit(self, amount):
+#         self.balance += amount
+#         print("rs", amount , "has been credited")
+#         print("total balance =", self.get_balance())
 
-    def get_balance(self):
-        return self.balance
+#     def get_balance(self):
+#         return self.balance
 
 
-acc1 = bankacc1(10000, "12345")
-acc1.debit(1000)
-acc1.credit(500) 
+# acc1 = bankacc1(10000, "12345")
+# acc1.debit(1000)
+# acc1.credit(500) 
+
+
+
+# class Student:
+
+#     def __init__(self, name , address):
+#         self.name = name
+#         self.address = address
+
+
+#     @staticmethod
+#     def hola():
+#         print("Welcome to the collage")
+
+#     @staticmethod
+#     def hello():
+#         print("Hello!!!!")    
+
+   
+# s1 = Student("Bibek Parajuli,", "KTM - 16")
+# s2 = Student("Diwash T Magar,", "TOKHA - 4")
+# s3 = Student("Sajana Parajuli,", "KTM - 16")
+
+# Student.hello()   
+# print(s1.name, s1.address)
+# print(s2.name, s2.address)
+# print(s3.name, s3.address)
+
+        
+
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    def get_avg(self):
+        sum = 0
+        for value in self.marks:
+            sum += value
+        print("hello your avg mark is:", sum/3 )
+
+s1 = Student("bibek", [12, 14, 15])
+s1.get_avg()
