@@ -282,6 +282,140 @@
 # check_for_word("everyone")
 
 
-f = open("Oops_lecture_8_.py", "w")
-f.write("#lecture_8")
-f.close()
+# f = open("Oops_lecture_8_.py", "w")
+# f.write("#lecture_8")
+# f.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# #qn.1 
+# print("Hello, World!")
+
+
+
+
+
+# # qn.2
+# name = input("Enter your name: ")
+# age = int(input("Enter your age: "))
+# print(f"hello {name}, and your age is {age}")
+
+
+
+
+
+# #qn.3
+# a = 10
+# b = 50
+
+# a, b = b, a
+
+# print("The value of a is ",a)
+# print("The value of b is ",b)
+
+
+
+
+#qn.4
+# a = int(input("Enter the num: "))
+# if a%2 == True:
+#     print("Odd")
+# else:
+#     print("Even")
+
+
+
+
+
+# qn.5
+# a = int(input("Enter the 1st(a) number: "))
+# b = int(input("Enter the 2nd(b) number: "))
+# c = int(input("Enter the 3rd(c) number: "))
+
+# if a >= b and a >= c:
+#     print("A is greater")
+# elif b >= a and b >= c:
+#     print("B is greater")
+# else:
+#     print("C is greater.")
+
+
+
+
+
+# qn.6
+# num = int(input("enter the number: "))
+# i = 1
+
+# for j in range(1, num + 1):
+#     i *= j
+# print(i)
+
+
+
+
+
+# qn.7
+# n = input("Enter the string: ")
+
+# j = n[::-1]
+
+# print(f"original text: {n}")
+# print(f"reversed text: {j}")
+
+
+
+
+# qn.8
+# Check if a string is a palindrome
+# n = input("Enter the string: ")
+# j = n[::-1]
+
+# if n == j:
+#     print("This string is palindrome: ", n)
+# else:
+#     print("This string is not palindrome: ", n)
+
+
+
+
+#qn.9
+#Count the vowels in a string
+string = input("Enter the sentence: ")
+vowel = 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'
+count = 0
+
+for char in string:
+    if char in vowel:
+        count += 1
+
+print(count)
+
