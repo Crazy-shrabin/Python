@@ -314,7 +314,7 @@
 
 
 
-
+#------------------------------Level 1 - Basics------------------------------------
 
 # #qn.1 
 # print("Hello, World!")
@@ -409,13 +409,220 @@
 
 #qn.9
 #Count the vowels in a string
-string = input("Enter the sentence: ")
-vowel = 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'
-count = 0
+# string = input("Enter the sentence: ")
+# vowel = 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'
+# count = 0
 
-for char in string:
-    if char in vowel:
-        count += 1
+# for char in string:
+#     if char in vowel:
+#         count += 1
 
-print(count)
+# print(count)
+
+
+
+
+#qn.10
+#Print the multiplication table of a given number.
+# num = int(input("Enter the number to multiply: "))
+# for i in range(1,11):
+#     result = num * i
+#     print(f"{num} * {i} = {result}" )
+
+
+
+
+
+#----------------------------Level 2 - Loops ------------------------------
+
+#Print numbers from 1 to 100.
+# i = 1
+# while i <= 100:
+#     print(i)
+#     i += 1
+
+
+
+
+
+#print only even numbers form 1 to 100.
+# for i in range(1, 101):
+#     if i%2 == 0:
+#         print(i)
+
+
+
+
+
+
+#Print the Fibonacci series up to n terms
+
+# n = int(input("Enter the num: "))
+
+# a = 0
+# b = 1
+
+# for i in range(n):
+#     print(a)
+
+#     sum = a + b
+#     a = b
+#     b = sum
+
+
+
+
+
+
+#Find the sum of numbers from 1 to n.
+
+n = int(input("Enter the number: "))
+total_sum = 0
+
+for i in range(1, n+1):
+    total_sum = total_sum + i
+
+print(total_sum)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
